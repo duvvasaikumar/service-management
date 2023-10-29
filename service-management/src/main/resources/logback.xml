@@ -1,0 +1,24 @@
+<configuration>
+
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="net.logstash.logback.encoder.LogstashEncoder">
+			<fieldNames>
+				<timestamp>timestamp</timestamp>
+				<message>message</message>
+				<logger>logger</logger>
+				<thread>thread</thread>
+				<stackTrace>stackTrace</stackTrace>
+			</fieldNames>
+		</encoder>
+	</appender>
+
+	
+		<root level="info">
+			<appender-ref ref="STDOUT" />
+		</root>
+	
+
+	<!-- Add more appenders and loggers as needed -->
+
+</configuration>
